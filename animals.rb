@@ -1,14 +1,13 @@
 class Animal
 
-attr_reader :name
-attr_accessor :breed, :age, :gender, :toy
+attr_accessor :name, :breed, :age, :gender, :toy
 
-def initialize (name, breed, age, gender, toy)
-  @name = name
-  @breed = breed
-  @age = age
-  @gender = gender
-  @toy = toy
-end
+  def initialize (name, breed, age, gender, toy)
+    @name = name
+    @breed = breed
+    @age = age
+    @gender = gender
+    @toy = toy
+  end
 
 end

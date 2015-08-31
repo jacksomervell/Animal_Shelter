@@ -1,7 +1,6 @@
 class Shelter 
 
-  attr_reader :name 
-  attr_accessor :clients
+  attr_accessor :name, :clients
 
   def initialize(name)
     @name = name
@@ -9,8 +8,8 @@ class Shelter
   end 
 
 
-  def add_client(name, age, gender, pets)
-    client << Client.new
+  def add_client(name, age, gender)
+    clients << Client.new(name, age, gender)
   end
 
 end

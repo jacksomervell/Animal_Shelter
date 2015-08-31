@@ -1,7 +1,7 @@
 class Client
 
   attr_reader :name
-  attr_accessor :pets, :age, :gender, 
+  attr_accessor :pets, :age, :gender
  
  def initialize (name, age, gender)
   @name = name
@@ -10,11 +10,11 @@ class Client
   @pets= []
  end 
 
- def to_s
-  "#{destination} with #{number_of_seats} passengers" 
- end
+ # def to_s
+ #  "#{destination} with #{number_of_seats} passengers" 
+ # end
 
- def add_animal(name, breed, age, gender, toy)
-    animal << Animal.new
+ def add_animal animal
+    @pets << animal
   end
 end
