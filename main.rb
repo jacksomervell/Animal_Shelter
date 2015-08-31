@@ -26,7 +26,7 @@ def list_clients shelter
 end 
 
 def list_animals client
-  clients.pets.each_with_index { |animal, index| puts "#{index}: #{animal.name}"}
+  client.pets.each_with_index { |animal, index| puts "#{index}: #{animal.name}"}
 end
 
 while response.downcase != 'q'
@@ -63,7 +63,7 @@ while response.downcase != 'q'
     gets
 
   when '3'
-    puts 'What client do you want to list passengers from?'
+    puts 'What client do you want to list pets from?'
     list_clients(shelter)
     #choose a flight
     client_number = gets.to_i
@@ -73,28 +73,11 @@ while response.downcase != 'q'
     list_animals(client)   
     gets 
 
-#     puts 'What is the passenger\'s name?'
-#     name = gets.chomp
-#     passenger = Passenger.new(name)
-#     puts "What flight do you want #{passenger.name} to be added to?"
-#     list_flights(airport)
+  when '4'
+    puts 'Here are all of the clients: '
+          list_clients(shelter)
+          gets
 
-#     flight_number = gets.to_i
-#     flight = airport.flights[flight_number]
-
-#     flight.add_passenger(passenger)
-#     puts "#{passenger.name} has been added to #{flight}"
-#     gets
-#   when '4'
-#     puts 'What flight do you want to list passengers from?'
-#     list_flights(airport)
-#     #choose a flight
-#     flight_number = gets.to_i
-#     flight = airport.flights[flight_number]
-#     #loop through passengers:
-#     puts "The passengers for this flight are:"
-#     list_passengers(flight)   
-#     gets 
   end 
 
   response = menu
